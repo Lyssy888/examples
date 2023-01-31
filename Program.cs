@@ -1,9 +1,14 @@
-﻿//Задача 1.//Напишите программу, которая на вход принимает число и выдаёт его квадрат
-Console.Write(" input you number: "); // запрос данных у пользователя
+﻿//Напишите программу, которая на вход принимает два числа и проверяет,//является ли первое число квадратом второго.
+Console.Write(" input you first number: ");
+int number_1 = Convert.ToInt32(Console.ReadLine());
 
-int number = Convert.ToInt32(Console.ReadLine()); // в переменную Number записали введеную пользователем значение
+Console.Write(" input you second number: ");
+int number_2 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($" You number is {number}");
-int result = number * number;
-Console.WriteLine($" квадрат {number} - {result}");
-Console.WriteLine(number*number);
+if (number_1 == number_2 * number_2) // проверка на равенство
+    Console.WriteLine($"число {number_1} является квадратом числа {number_2}");// опустить фигурные скобки можно если одно действие
+
+else
+{
+    Console.WriteLine($"число {number_1} не является квадратом числа {number_2}");
+}
