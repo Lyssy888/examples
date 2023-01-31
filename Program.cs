@@ -1,14 +1,13 @@
-﻿//Задача 3.
-//Напишите программу, которая на вход принимает два числа и проверяет,
-//является ли первое число квадратом второго.
-
-Console.Write( "input your number N: ");
+﻿//Напишите программу, которая принимает на вход трёхзначное число и// на выходе показывает последнюю цифру этого числа.
+Console.Write("input your number 3-digit: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int current_num = (-1) * num;
-
-while( current_num <= num)
+if (num > 99 & num <1000)
 {
-    Console.Write(current_num + " ");
-    current_num++;
+    int digit_3  = num % 10;
+    Console.WriteLine($"Third digit is {digit_3}");
+}
+else
+{
+    Console.WriteLine("your number is not digit-3!");
 }
